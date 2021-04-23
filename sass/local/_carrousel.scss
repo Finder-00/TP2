@@ -1,0 +1,66 @@
+.carrousel{
+    display: flex;
+    width: 300vw;
+    height: 50vh;
+    transition: transform 0.5s;
+
+    div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: clamp(1rem, #{"-.3rem + 8.333vw"}, 2.5rem);;
+        text-align: center;
+        // image 1 slider
+        &:nth-of-type(1){
+            width: 100vw;
+            background: linear-gradient(228deg, rgba(101,45,158,1) 0%, rgba(30,95,200,1) 56%, rgba(0,251,255,1) 100%);         }
+        // image 2 slider
+        &:nth-of-type(2){
+            width: 100vw;
+            background: rgb(252,70,107);
+            background: radial-gradient(circle, rgba(252,70,107,1) 8%, rgba(63,94,251,1) 100%); 
+            }
+            // image 3 slider
+        &:nth-of-type(3){
+            width: 100vw;
+            background: rgb(97,48,253);
+            background: linear-gradient(90deg, rgba(97,48,253,1) 0%, rgba(93,192,188,1) 61%, rgba(69,252,187,1) 100%); 
+        }
+        a{
+            text-decoration: none;
+            color: rgb(16, 22, 31);
+            &:hover{
+                color: rgb(50, 205, 190);
+            }
+        }
+    } /*fin div*/
+}
+
+.bouton{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    margin: 0 0 10px 0;
+}
+
+// bouton navigation dans carrousel
+#un,#deux,#trois{
+    background-color: #fff;
+    border-radius: 100px;
+    width: 16px;
+    height: 16px;
+    margin: 4px;
+    &:hover{
+        cursor: pointer;
+        background-color: rgb(57, 20, 165);
+        border: 1.35px solid white;
+    }
+    @include media-desktop{
+        background-color: #4096dd;
+        border: 2px;
+        &:hover{
+            background-color: rgb(73, 56, 124);
+            border: 2px solid rgb(48, 45, 118);
+        }
+    }
+}

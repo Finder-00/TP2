@@ -1,0 +1,309 @@
+body{
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.home{
+    margin: 0;
+    #primary{
+        margin-left: 0;
+        width: 100vw;
+    }
+}
+
+body.home::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-color: #c8fdff;
+    @include media-desktop{
+        background-image: url(https://e1938022.webdev.cmaisonneuve.qc.ca/4w4/wp-content/uploads/2021/04/ile-flotante-scaled.jpg);
+        background-repeat: no-repeat;
+        background-position: -10vh 0vw 0 0vw;
+        background-size: 37%;
+        clip-path: circle(26.4% at 13% 18%);
+    }
+}
+
+.home::before{ //border de l'image
+content: "";
+z-index: -2;
+display: block;
+position: absolute;
+top: -2px;
+left: -1.5px;
+width: 101.34%;
+height: 101.34%;
+background-color: #c8fdff;
+clip-path: circle(26.4% at 13% 18%);
+}
+
+// Header si == Accueil
+.site-branding {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    @include media-desktop{
+        margin-left: 37vw;
+        height: 65vh;
+        text-align: left;
+    }
+ 
+}
+// titre si == Accueil
+.site-title { // h1 titre header
+    font-size: clamp(.7rem, #{"-.8rem + 8.333vw"}, 1.8rem);
+    font-family: $font_title;
+    margin: .2rem 0;
+        a{
+            color: #8af0f0;
+            text-decoration: none;    
+            &:hover{
+                color: #20BFBF;
+            }
+        }
+    @include media-desktop{
+        font-size: clamp(.9rem, #{"-.8rem + 8.333vw"}, 2.25rem);
+        a{
+            text-decoration: none;    
+        }
+    }
+}
+
+
+//Header si != Accueil
+.headerAutre{
+    padding:5vh 0 0 5vw;
+    height: 30vh;
+    // titre si != Accueil
+    .site-title{
+        margin: 0;
+    }
+}
+
+
+.site-description { // sous-titre
+    font-family: $font_title;
+    font-size: clamp(.5rem, #{"-.8rem + 8.333vw"}, 1.3rem);
+    font-weight: normal;
+    color: #30BBC6;
+    margin-top: 0;
+    margin-bottom: 3%;
+    padding: 0;
+    &:hover{
+        cursor:default;
+    }
+    @include media-desktop{
+        font-size: clamp(.9rem, #{"-.8rem + 8.333vw"}, 1.5rem);
+    }
+}
+
+.entry-title{ // titre des articles
+    color: rgb(24, 54, 79);
+    background-color: rgb(255, 255, 255);
+    border-bottom: 3px solid;
+}
+
+.entry-content{ // les articles des cours 
+    width: 90vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: clamp(.9rem, #{"-.8rem + 8.333vw"}, 1.5rem);
+    color: rgb(24, 54, 79);
+    background: rgb(244, 244, 244);
+    border-radius: 10px;
+    p{
+        margin: 5% 0 10px 0;
+        font-weight: bold;
+        width: 100%;
+    }
+    ul{
+        margin: 10px 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    .wp-block-image{
+        align-self: center;
+        margin: 0 0 0 0px;
+    }
+    img{
+        display: block;
+        border-radius: 10px;
+    }
+
+    @include media-desktop{
+        flex-direction: row;
+        text-align: start;
+        .blocks-gallery-item figure{
+            margin: 0 0 0 5%;
+            width: 400px;
+            height: 400px;
+        }
+        p{
+            margin: 5%;
+        }
+        ul{
+            margin-right: 5vh;
+            width: 150px;
+        }
+    }// fin media-desktop
+} // fin .entry-content
+
+/*span{ // ligne de separation des section
+    display: block;
+    margin: 10% 0 0 0;
+    width: 90vw;
+    margin: 0 auto;
+    border-bottom: 3px solid lightcoral;
+}*/
+.article-menu{ //grosse section contenant tout les articles
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(21, 51, 82);
+
+    h1{ // grand titre section
+        width: 100vw;
+        font-size: clamp(1rem, #{"-.8rem + 6vw"}, 2rem);
+        color:white;
+        text-align: center;
+        margin: 8% 20% 1% 20%;
+    }
+
+
+    section.bloc{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 20px 0;
+        width: 100vw;
+
+        article{ //chaque bloc
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            margin: 10px 4vw;
+            width: 100%;
+            height: 22vh;
+            background-color: rgb(28, 41, 70);
+            border-radius: 10px;
+            z-index: 1;
+            transition: all .2s ease-out;
+            &:hover{
+                transform: scale(102%);
+            }
+            
+            p{ // infos haut & bas cellule
+                font-size:clamp(.6rem, 3vw , .9rem) ;
+                color: lightcoral;
+            }
+            a{ // lien cours
+                font-size: clamp(.85rem, #{"-.5rem + 5vw"}, 1.2rem);
+                font-weight: bold;
+                // color: rgb(201, 244, 244);
+                color: white;
+                text-decoration: none;
+                &:hover{
+                    color: rgb(94, 165, 213);
+                }
+            }
+        }// fin article
+
+        svg{ //vagues SVG de chaques articles 
+            position:absolute;
+            width: 100%;
+            bottom: 0;
+            border-radius: 10px;
+            z-index: -1;
+            fill: darkgoldenrod;
+           }
+        .Web{ //classe des articles par categorie
+            background-color: rgb(31, 31, 31);
+            
+        }
+        .Spécifique{
+            background-color: rgb(49, 16, 126);
+            &:hover{
+                box-shadow: 0px 3px 13px rgba(70, 25, 174, 0.837);
+            }
+        }
+        .Jeu{
+            &:hover{
+                box-shadow: 0px 3px 13px rgba(39, 130, 179, 0.461);
+            }
+        }
+        .Image{
+            p{
+                color: rgb(0, 37, 100);
+            }
+            a{
+                color: rgb(255, 210, 132);
+            }
+            background-color: rgb(225, 82, 66);
+            &:hover{
+                box-shadow: 0px 3px 13px rgba(225, 82, 66, 0.659);
+            }
+        }
+        .Conception{
+            p{
+                color: rgb(58, 0, 139);
+            }
+            a{
+                color: rgb(59, 112, 169);
+            }
+            background-color: rgb(252, 182, 182);
+            &:hover{
+                box-shadow: 0px 3px 13px rgba(255, 200, 212, 0.692);
+            }
+        }
+    }//fin section
+
+    // Desktop
+    @include media-desktop{
+
+        // grand titre section 
+        h1{
+            margin:inherit;
+            margin: 50px 0 35px 0;
+        }
+        section.bloc{
+            margin-bottom: 5vh;
+            justify-content: space-around;
+        }
+        section.bloc article{
+            width: 40%;
+            height: 30vh;
+            margin-left: 0;
+            margin-right: 0;
+
+
+            p{ // infos haut & bas cellule
+                font-size:clamp(.9rem, 2vw , 1.2rem);
+                font-weight:lighter;
+            }
+            a{ // lien cours
+                font-size: clamp(.9rem, #{"-.5rem + 6.333vw"}, 1.5rem);
+                font-weight: bold;
+                color: rgb(206, 252, 255);
+                text-decoration: none;
+                &:hover{
+                    color: rgb(38, 79, 175);
+                }
+            }
+        }
+    }// fin desktop
+
+}// fin article menu

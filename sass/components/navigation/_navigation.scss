@@ -1,0 +1,248 @@
+// NAVIGATION
+.main-navigation {
+	display: inline-block;
+	width: 100vw;
+
+	ul {/* nav - menu (ul principal) */
+		background-color:#c8fdff;
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+		padding: 30px 0;
+		width: 100%;
+	
+		ul { /*Sub-menu*/
+			position: absolute;
+			padding: 2px;
+			top: 100%;
+			left: -999em;
+			z-index: 99999;
+			a{/* sous-onglets du Sub-menu*/
+				width: 100%;
+			}
+		} /*fin sub-menu*/
+
+		// icone menu
+		.menu-image-title-hide{
+			justify-content: center;
+			margin: 0 auto;
+			width: 50px;
+			img{
+				border-radius: 100px;
+			}
+		}
+
+
+
+		li{ /*les onglets principale*/
+			font-size: 1.2rem;
+			padding: 10px 5px;
+
+			&:hover{
+				background-color: rgba(134, 216, 225, 0.392);
+			}
+			&:hover > ul{ // deplie les sous onglets 
+				opacity: 1;
+			}
+
+			ul{ // conteneur des sous onglets ci-bas
+				transition: opacity .4s ease-out;
+				opacity: 0;
+			}
+			li{ /* les sous onglets des onglets principale */
+				padding: inherit;
+				padding: 5px 2px;
+				background-color: #c1ebee;
+			}
+			li>a{
+				color: $color__linkmenu;
+				padding: inherit;
+				border-bottom: 1px solid white;
+			}
+		}
+		li:hover > ul,
+		li.focus > ul {
+			left: 0;
+			display: block;
+		}
+		//menu deroulant mobile
+		//fleche qui pointe
+		li > a[href="#"]::after{
+			content:"\203A";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 50%;
+			bottom: 0;
+			left: 95%;
+			right: 0;
+		}
+		//fleche qui s'abaisse
+		li.focus > a[href="#"]::after,
+		li > a[href="#"]:hover::after{
+			content:"\2304";
+			transition: all .3s ease-in;
+		}
+
+	} /* fin ul principale*/
+
+	li {
+		position: relative;
+		&:hover > a,
+		&.focus > a {
+		}
+
+	}
+
+	a {
+		display: block;
+		text-decoration: none;
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+	}
+}
+/* ------------------------------
+	fin de .main-navigation
+ --------------------------------*/
+
+
+
+/*---------------
+bouton burger
+----------------*/
+#burger{
+	margin: 10px;
+	padding: 0;
+	border : 0;
+	transform: rotate(0);
+	transition: all .5s ease-out;
+}
+
+#burger:focus{
+	outline: 1px solid white;
+	outline-offset: -4px;
+}
+
+#burger:active{
+transform: scale(0.9);
+}
+
+.visible{
+	display: block !important;
+}
+
+.sub-menu{
+	background-color: rgb(51, 153, 131);
+	left: -1000px;
+}
+/* Small menu. */
+#burger,
+.main-navigation.toggled ul {
+	display: none;
+}
+/*---------------
+FIN bouton burger
+----------------*/
+
+
+
+
+/*--------------
+Section desktop
+---------------*/
+.main-navigation.toggled ul,
+.main-navigation ul{
+	@include media-desktop{
+		display: flex !important; // solution du bug de menu en passant de mobile a desktop
+		position: static;
+		justify-content: space-around;
+		align-items: center;
+		width: 100vw;
+		height: 2rem;
+		background-color: #c8fdff;
+		a[href="#"]::after{
+			display: none;
+		}
+		li{
+			&:hover> ul{
+				animation: anim-sousMenu .5s both;
+			}
+		}
+
+		ul{
+		position: absolute;
+		width: 250px;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		border-radius: 0 0 5px 5px;
+
+			li{
+				width: 100%;
+				display: block;
+			}
+			li:hover{
+				background-color: #91e2e2;
+				border-radius: 5px;
+			}
+		}
+		// li des premiers onglets du nav
+		li{
+			width: 20%;
+			text-align: center;
+			&:hover{ // a voir // a voir  // a voir  // a voir  // a voir  // a voir
+				border-bottom: 40px #000000 !important;
+			}
+			li{
+				padding: 7px 2px;
+			}
+		}
+	}
+}
+
+@keyframes anim-sousMenu {
+	from{
+		top: 10px;
+	}
+
+	to{
+		top: 100%;
+	}
+}
+/*---------------------
+-- fin desktop
+-----------------------*/
+
+
+
+
+
+// autre *intoucher*
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+	}
+
+	.nav-links {
+		display: flex;
+	}
+
+	.nav-previous {
+		flex: 1 0 50%;
+	}
+
+	.nav-next {
+		text-align: end;
+		flex: 1 0 50%;
+	}
+}

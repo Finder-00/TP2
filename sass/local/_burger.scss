@@ -1,0 +1,72 @@
+/*----------------- variable sass */
+$largeur_burger : 33px;
+$duree : .3s;
+$epaisseur: 5%;
+
+#burger{
+    @include media-desktop{
+        display: none; // masque pour desktop
+    }
+    display: block;
+    position: relative;
+    width: $largeur_burger;
+    height: $largeur_burger;
+    border-radius: 50%;
+    &:hover{cursor: pointer;}
+    div{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        &:nth-of-type(1){
+            clip-path: polygon(0 15%, 100% 15%, 100% 25%, 0 25%);
+            background-color: rgb(30, 35, 99);
+        }
+        &:nth-of-type(2){
+            clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
+            background-color: rgb(30, 35, 99);
+            z-index: -1;
+        }
+        &:nth-of-type(3){
+            clip-path: polygon(0 75%, 100% 75%, 100% 85%, 0 85%);
+            background-color: rgb(30, 35, 99);
+        }
+    }
+}
+
+/*--------- Animation barre 1 */
+@keyframes ouvrirX1{
+    from{clip-path: polygon(0 15%, 100% 15%, 100% 25%, 0 25%);}
+    to{clip-path: polygon($epaisseur (-$epaisseur), 105% 95%, 95% 105%, (-$epaisseur) $epaisseur);}
+}
+@keyframes fermerX1{
+    from{clip-path: polygon($epaisseur (-$epaisseur), 105% 95%, 95% 105%, (-$epaisseur) $epaisseur);}
+    to{clip-path: polygon(0 15%, 100% 15%, 100% 25%, 0 25%);}
+}
+.ouvrirX1 {animation: ouvrirX1 $duree both;}
+.fermerX1 {animation: fermerX1 $duree both;}
+
+
+/*--------- Animation barre 2 */
+@keyframes ouvrirX2{
+    from{clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);}
+    to{clip-path: polygon(50% 45%, 50% 45%, 50% 55%, 50% 55%);}
+}
+@keyframes fermerX2{
+    from{clip-path: polygon(50% 45%, 50% 45%, 50% 55%, 50% 55%);}
+    to{clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);}
+}
+.ouvrirX2 {animation: ouvrirX2 $duree both;}
+.fermerX2 {animation: fermerX2 $duree both;}
+
+
+/*--------- Animation barre 3 */
+@keyframes ouvrirX3{
+    from{clip-path: polygon(0 75%, 100% 75%, 100% 85%, 0 85%);}
+    to{clip-path: polygon((-$epaisseur) 95%, 95% (-$epaisseur), 100% $epaisseur, $epaisseur 105%);}
+}
+@keyframes fermerX3{
+    from{clip-path: polygon((-$epaisseur) 95%, 95% (-$epaisseur), 100% $epaisseur, $epaisseur 105%);}
+    to{clip-path: polygon(0 75%, 100% 75%, 100% 85%, 0 85%);}
+}
+.ouvrirX3 {animation: ouvrirX3 $duree both;}
+.fermerX3 {animation: fermerX3 $duree both;}
