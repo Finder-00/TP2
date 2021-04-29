@@ -570,6 +570,12 @@ input[type="submit"] {
   background: #e6e6e6;
   color: rgba(0, 0, 0, 0.8);
   line-height: 1;
+}
+
+button:not(.search-submit),
+input[type="button"]:not(.search-submit),
+input[type="reset"]:not(.search-submit),
+input[type="submit"]:not(.search-submit) {
   padding: 0.6em 1em 0.4em;
 }
 
@@ -642,6 +648,46 @@ textarea {
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
+.site {
+  display: grid;
+  grid-template-columns: auto 25%;
+  grid-template-areas: "header header" "main sidebar" "footer footer";
+}
+
+.site-header {
+  grid-area: header;
+}
+
+.site-main {
+  grid-area: main;
+  overflow: hidden;
+  /* Resolves issue with <pre> elements forcing full width. */
+}
+
+.widget-area {
+  grid-area: sidebar;
+  background-color: cadetblue;
+}
+
+.site-footer {
+  grid-area: footer;
+}
+
+.no-sidebar .site {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas: "header" "main" "footer";
+}
+
+/*
+	#page - .site
+		#masthead - .site-header
+		.site-branding
+			.site-title
+			.site-description
+		#site-navigation - .main-navigation
+		
+*/
 .no-sidebar .site {
   display: grid;
   grid-template-columns: auto;
@@ -1176,6 +1222,7 @@ body.home::after {
 }
 
 .site-branding {
+  width: 100vw;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -1196,7 +1243,7 @@ body.home::after {
 }
 
 .site-title a {
-  color: #8af0f0;
+  color: #2edada;
   text-decoration: none;
 }
 
@@ -1819,7 +1866,7 @@ body.home::after {
 }
 
 .galerie {
-  background-color: white;
+  background-color: #244e77;
   display: flex;
   width: 100vw;
   flex-wrap: wrap;
@@ -1889,27 +1936,149 @@ body.home::after {
   cursor: pointer;
 }
 
-footer {
+.home .nouvelles {
   width: 100vw;
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  margin: 2px;
 }
 
-footer .site-info {
-  padding: 1rem 0;
-  display: flex;
-  background-color: rgba(11, 63, 140, 0.433);
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.home .nouvelles #bout_nouvelles {
+  height: 50px;
+  width: 300px;
+  margin: 5vh 0 15vh 4vw;
+  border: none;
+  font-weight: bold;
+  background-color: #ff4c67;
+  color: white;
+  border-radius: 10px;
+  transition: all .3s;
+}
+
+.home .nouvelles #bout_nouvelles:hover {
+  box-shadow: rgba(255, 76, 103, 0.187) 0px 10px 15px;
+  transform: scale(102%);
+  cursor: pointer;
+}
+
+.home .nouvelles section {
+  margin-left: 4vw;
+}
+
+.home .nouvelles section h2 {
+  color: #ff4c67;
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.home .nouvelles section p {
   color: white;
 }
 
-footer .site-info h3 {
-  font-weight: bold;
-  text-decoration: none;
+/*
+footer{ // class du footer
+    width: 100vw;
+    margin: 0;
+    .site-info{
+        padding: 1rem 0;
+        display: flex;
+        background-color: rgba(11, 63, 140, 0.433);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        h3{
+            font-weight: bold;
+            text-decoration: none;
+        }
+        a{
+            text-decoration: none;
+        }
+    }
+}
+*/
+.site-footer {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: antiquewhite;
 }
 
-footer .site-info a {
+.site-footer .ligne-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.site-footer .ligne-footer h2 {
+  color: black;
+}
+
+.site-footer .ligne-footer #calendar-3 {
+  width: 200px;
+}
+
+.site-footer .ligne-footer #calendar-3 #wp-calendar {
+  margin-bottom: 0;
+}
+
+.site-footer .ligne-footer #calendar-3 .wp-calendar-nav {
+  display: flex;
+  background-color: #235896;
+  width: 75px;
+  height: 35px;
+  border-radius: 100px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.site-footer .ligne-footer #calendar-3 .wp-calendar-nav:hover {
+  background-color: #12253a;
+}
+
+.site-footer .ligne-footer #calendar-3 .wp-calendar-nav span {
+  align-self: center;
+}
+
+.site-footer .ligne-footer #calendar-3 .wp-calendar-nav span a {
+  margin-left: 10px;
+  font-weight: bold;
+  text-decoration: inherit;
+  color: white;
+}
+
+.site-footer .ligne-footer #search-2 .search-field {
+  width: 300px;
+  border-radius: 0px;
+  background-color: antiquewhite;
   text-decoration: none;
+  border-style: none;
+  border-bottom: 2px solid #D4A771;
+}
+
+.site-footer .ligne-footer #search-2 input[type="submit"] {
+  padding-top: -20px !important;
+  border-radius: 100px;
+  color: white;
+  background-color: #ff4c67;
+  border-style: none;
+  height: 40px;
+  width: 150px;
+}
+
+.site-footer .ligne-footer #gallery-1 {
+  margin: 0 20px;
+  display: flex;
+}
+
+.site-footer .ligne-footer img {
+  width: 150px;
+}
+
+.site-footer .ligne-footer:nth-child(2) h2 {
+  margin: 0 20px;
 }
 /*# sourceMappingURL=style.css.map */

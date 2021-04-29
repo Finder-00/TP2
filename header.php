@@ -23,7 +23,7 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <!-- si front page affiche le sidebar  *jai desactiver sidebar* -->
-<div id="page" class="site" <?php body_class(is_front_page() && is_home() ? 'no_sidebar' : '') ?> >
+<div id="page" class="site" <?php body_class(is_front_page() || is_category( 'Projets' ) ? 'no-sidebar' : '') ?> >
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'theme-4w4' ); ?></a>
 
 	<header id="masthead" class="site-header">

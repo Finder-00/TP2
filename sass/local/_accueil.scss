@@ -46,6 +46,7 @@ clip-path: circle(26.4% at 13% 18%);
 
 // Header si == Accueil
 .site-branding {
+    width: 100vw;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -62,7 +63,7 @@ clip-path: circle(26.4% at 13% 18%);
     font-family: $font_title;
     margin: .2rem 0;
         a{
-            color: #8af0f0;
+            color: #2edada;
             text-decoration: none;    
             &:hover{
                 color: #20BFBF;
@@ -71,7 +72,7 @@ clip-path: circle(26.4% at 13% 18%);
     @include media-desktop{
         font-size: clamp(.9rem, #{"-.8rem + 8.333vw"}, 2.25rem);
         a{
-            text-decoration: none;    
+            text-decoration: none;
         }
     }
 }

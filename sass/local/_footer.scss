@@ -1,0 +1,103 @@
+/*
+footer{ // class du footer
+    width: 100vw;
+    margin: 0;
+    .site-info{
+        padding: 1rem 0;
+        display: flex;
+        background-color: rgba(11, 63, 140, 0.433);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        h3{
+            font-weight: bold;
+            text-decoration: none;
+        }
+        a{
+            text-decoration: none;
+        }
+    }
+}
+*/ //Ancien footer
+
+
+.site-footer{
+    width: 100vw;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: antiquewhite;
+
+    .ligne-footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        h2{
+            color: black;
+        }
+        //calendrier
+        #calendar-3{
+            width: 200px;
+            #wp-calendar{
+                margin-bottom: 0;
+            }
+            .wp-calendar-nav{
+                display: flex;
+                background-color: rgb(35, 88, 150);
+                width: 75px;
+                height: 35px;
+                border-radius: 100px;
+                text-align: center;
+                margin-top: 5px;
+                &:hover{
+                    background-color: rgb(18, 37, 58);
+                }
+                span{ // bouton bas du calendrier
+                    align-self: center;
+                    a{ 
+                        margin-left: 10px;
+                        font-weight: bold;
+                        text-decoration: inherit;
+                        color: white ;
+                    }
+                }
+            }
+        }
+        // barre de recherche
+        #search-2{
+            .search-field{
+                width: 300px;
+                border-radius: 0px;
+                background-color: antiquewhite;
+                text-decoration: none;
+                border-style: none;
+                border-bottom: 2px solid #D4A771;
+            }
+            input[type="submit"]{
+                padding-top: -20px !important;
+                border-radius: 100px;
+                color: white;
+                background-color: rgb(255, 76, 103);
+                border-style: none;
+                height: 40px;
+                width: 150px;
+            }
+        }
+        //conteneur image
+        #gallery-1{
+            margin: 0 20px;
+            display: flex;
+        }
+        img{
+            width: 150px;
+        }
+    }
+    .ligne-footer:nth-child(2){
+        h2{
+            margin: 0 20px;
+        }
+    }
+}

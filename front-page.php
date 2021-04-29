@@ -51,14 +51,16 @@ get_header();
 						<?php endif; ?>
 						<h1><?php echo $tPropriete['titre'] ?></h1>
 
-						<section <?php echo (in_array($tPropriete['typeCours'], ['Web','Jeu']) ? 'class="carrousel2"' : 'class="bloc"'); ?>>
+						<section <?php echo class_composent($tPropriete['typeCours']); ?>>
 
 					<?php endif; ?>					
-						<?php if( in_array($tPropriete['typeCours'], ['Web','Jeu']) && is_front_page()):
-						get_template_part( 'template-parts/content', 'carrousel' );
-						$ctrl_radio .= '<div> <input type="radio" class="bouton-radio" name="rad-'.$tPropriete['typeCours'].'"> </div>';
+						<?php if( in_array($tPropriete['typeCours'], ['Web','Jeu', ])):
+							get_template_part( 'template-parts/content', 'carrousel' );
+							$ctrl_radio .= '<div> <input type="radio" class="bouton-radio" name="rad-'.$tPropriete['typeCours'].'"> </div>';
+						elseif($tPropriete['typeCours'] == 'Projets'):
+							get_template_part( 'template-parts/content', 'galerie');
 						else :
-						get_template_part( 'template-parts/content', 'bloc' );
+							get_template_part( 'template-parts/content', 'bloc' );
 						endif;
 
 					$precedent = $tPropriete['typeCours'];
@@ -66,16 +68,33 @@ get_header();
 			</section>
 
 		<?php endif; ?> <!-- fin if (Have post())-->
+			
+			<section class="nouvelles">	
+				<button id="bout_nouvelles"> Afficher les 3 dernières nouvelles</button>
+				<section></section>
+			</section>
 
 	</main><!-- #main -->
 
 <?php
 
-get_sidebar();
+// get_sidebar();
 get_footer();
 
+
+function class_composent($typeCours){
+ 	if(in_array($typeCours, ['Web', 'Jeu'])){
+		return('class="carrousel2"');
+ 	}
+	elseif($typeCours == 'Projets'){
+		return('class="galerie"');
+	}
+	else{
+		return 'class="bloc"';
+	}
+}
+
 function convertir_tableau(&$tPropriete){
-	
 	$titreGrand = get_the_title();
 	// print($titreGrand);
 	// print_r($tPropriete['session']);
