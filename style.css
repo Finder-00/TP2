@@ -2011,6 +2011,96 @@ body.home::after {
   cursor: pointer;
 }
 
+.description {
+  display: flex;
+  font-size: 1rem;
+  color: #505050;
+  width: 60%;
+  margin: 0 auto;
+  font-weight: normal;
+}
+
+.articlePerso {
+  display: flex;
+  box-sizing: border-box;
+  padding: 20px 10px 10px 10px;
+  margin: 10px;
+  text-align: center;
+  justify-content: center;
+  transition: all .4s ease-out;
+}
+
+.articlePerso a {
+  position: relative;
+}
+
+.articlePerso a img {
+  transition: all .2s ease-out;
+  border-radius: 10px;
+}
+
+.articlePerso h1 {
+  font-size: 2rem;
+}
+
+.articlePerso .description {
+  display: flex;
+  font-size: 1.3rem;
+  color: #505050;
+  width: 60%;
+  margin: 0 auto;
+  font-weight: normal;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  justify-content: center;
+  justify-items: center;
+  justify-self: center;
+}
+
+.articlePerso span {
+  transition: .2s all ease-out;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background-color: #f0f0f0;
+}
+
+.articlePerso:hover > a span {
+  z-index: 1;
+  opacity: 1;
+  transform: rotateY(180deg) scale(105%);
+  box-shadow: 0px 6px 5px rgba(0, 0, 0, 0.31);
+}
+
+.articlePerso:hover > a img {
+  transform: rotateY(90deg) scale(105%);
+  opacity: 0;
+}
+
+.articlePerso:hover > .galerie_info {
+  opacity: 1;
+}
+
+.articlePerso .galerie_info {
+  z-index: 2;
+  transition: .3s all ease-in;
+  position: absolute;
+  margin-top: 50px;
+  font-size: clamp(0.5rem, -.8rem + 8.333vw, 1rem);
+  color: black;
+  opacity: 0;
+  font-weight: bold;
+}
+
+.articlePerso .galerie_info:hover {
+  cursor: pointer;
+}
+
 .admin-rapide {
   margin-left: 4vw;
   display: block;

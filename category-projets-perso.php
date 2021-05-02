@@ -21,16 +21,13 @@ get_header();
 					echo '<h1 class="page-title">' . single_cat_title('', false ). '</h1>';
 					the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
-				<h1>WOOOWWW</h1>
 			</div>
 			
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
-
 				get_template_part( 'template-parts/content', 'galeriePerso' );
-
 			endwhile; ?>
 			
 			</section>

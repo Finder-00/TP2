@@ -8,13 +8,17 @@
  */
 ?>
 
-<article class="article">
+<article class="articlePerso">
 	<a href="<?php echo get_permalink()?>">
 		<span></span>
-		<?php the_post_thumbnail( 'thumbnail' ); ?>
+		<?php the_post_thumbnail( 'large' ); ?>
 	</a>
 	<div class="galerie_info">
-		<?php the_title() ?>
-		<?php the_archive_description() ?>
+		<h1>
+			<?php the_title() ?>
+		</h1>
+		<div class="description">
+			<?php print(get_the_excerpt()) ?>
+		</div>
 	</div>
 </article>
