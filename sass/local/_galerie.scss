@@ -1,8 +1,9 @@
 // grand titre de section projet
 .titreProjet{
     display: flex;
-    width: 100vw;
+    width: 80vw;
     flex-direction: column;
+    color: white;
     h1,p{
         margin: 0 auto;
         text-align: center;
@@ -14,12 +15,17 @@
         margin-bottom: 3%;
     }
 }
+.galerie-frontPage{
+    width: 100vw;
 
-// section contenant tout projet
+}
 .galerie{
+    width: 78vw;
+}
+// section contenant tout projet
+.galerie,.galerie-frontPage{
     background-color: rgb(36, 78, 119);
     display: flex;
-    width: 100vw;
     flex-wrap: wrap;
     justify-content: center;
 

@@ -40,7 +40,11 @@ footer{ // class du footer
         }
         //calendrier
         #calendar-3{
-            width: 200px;
+            width: 300px;
+            text-align: center;
+            h2{
+                margin-bottom: 10px;
+            }
             #wp-calendar{
                 margin-bottom: 0;
             }
@@ -74,8 +78,9 @@ footer{ // class du footer
                 background-color: antiquewhite;
                 text-decoration: none;
                 border-style: none;
-                border-bottom: 2px solid #D4A771;
+                border-bottom: 2px solid #c24163;
             }
+            //bouton
             input[type="submit"]{
                 padding-top: -20px !important;
                 border-radius: 100px;

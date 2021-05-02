@@ -18,7 +18,66 @@
 
 .widget-area {
 	grid-area: sidebar;
-	background-color: cadetblue;
+	background-color: rgb(252, 234, 255);
+	margin: 15px;
+	border-radius: 10px;
+	height: 700px;
+	color: black;
+	// tout les widgets
+	.widget{
+		margin:0 auto;
+	}
+	section{
+		margin-bottom: 20px !important;
+	}
+	// calendrier sidebar
+	#calendar-2{
+	width: 200px;
+	text-align: center;
+		#wp-calendar{
+			margin-bottom: 0;
+		}
+		.wp-calendar-nav{
+			display: flex;
+			background-color: rgb(35, 88, 150);
+			width: 75px;
+			height: 35px;
+			border-radius: 100px;
+			text-align: center;
+			margin-top: 5px;
+			&:hover{
+				background-color: rgb(18, 37, 58);
+			}
+			span{ // bouton bas du calendrier
+				align-self: center;
+				a{ 
+					margin-left: 10px;
+					font-weight: bold;
+					text-decoration: inherit;
+					color: white ;
+				}
+			}
+		}
+	}// fin calendrier
+
+	// Articles recents
+	#recent-posts-2{
+		width: 200px;
+		margin: 0 auto;
+		h2{ // titre
+			margin-bottom: 8px;
+		}
+		ul{
+			margin: 0;
+			padding-left: 4px;
+			list-style: none;
+			li a{
+				color: rgb(42, 101, 165);
+				font-size: 1.2rem;
+				text-decoration: none;
+			}
+		}
+	}
 }
 
 .site-footer {

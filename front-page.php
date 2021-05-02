@@ -53,11 +53,11 @@ get_header();
 
 						<section <?php echo class_composent($tPropriete['typeCours']); ?>>
 
-					<?php endif; ?>					
-						<?php if( in_array($tPropriete['typeCours'], ['Web','Jeu', ])):
-							get_template_part( 'template-parts/content', 'carrousel' );
+					<?php endif; ?>
+						<?php if( in_array($tPropriete['typeCours'], ['Web','Jeu'])):
+							get_template_part( 'template-parts/content', 'carrousel');
 							$ctrl_radio .= '<div> <input type="radio" class="bouton-radio" name="rad-'.$tPropriete['typeCours'].'"> </div>';
-						elseif($tPropriete['typeCours'] == 'Projets'):
+						elseif($tPropriete['typeCours'] == 'Projets-perso'):
 							get_template_part( 'template-parts/content', 'galerie');
 						else :
 							get_template_part( 'template-parts/content', 'bloc' );
@@ -66,8 +66,16 @@ get_header();
 					$precedent = $tPropriete['typeCours'];
 				endwhile; ?> <!-- fin WHILE-->
 			</section>
-
 		<?php endif; ?> <!-- fin if (Have post())-->
+			
+			<!-- Formulaire qui ajoute des nouvelles -->
+			<section class="admin-rapide">
+				<h3>Ajouter une nouvelle</h3>
+				<input type="text" name="title" placeholder="titre">
+				<textarea name="content"></textarea>
+				<button id="bout-rapide">Ajouter la nouvelle</button>
+				<?php ?>
+			</section>
 			
 			<section class="nouvelles">	
 				<button id="bout_nouvelles"> Afficher les 3 dernières nouvelles</button>
@@ -86,8 +94,8 @@ function class_composent($typeCours){
  	if(in_array($typeCours, ['Web', 'Jeu'])){
 		return('class="carrousel2"');
  	}
-	elseif($typeCours == 'Projets'){
-		return('class="galerie"');
+	elseif($typeCours == 'Projets' || $typeCours == 'Projets-perso'){
+		return('class="galerie-frontPage"');
 	}
 	else{
 		return 'class="bloc"';
