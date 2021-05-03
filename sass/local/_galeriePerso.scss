@@ -15,14 +15,28 @@
         border-radius: 10px;
     }
 
+    // conteneur titre et description projet
+    .galerie_info{
+        z-index: 2;
+        transition: .3s all ease-in;
+        position:absolute;
+        font-size: clamp(.5rem, #{"-.8rem + 3.333vw"}, 1rem);
+        color: black;
+        opacity: 0;
+        font-weight: bold;
+        &:hover{
+            cursor: pointer;
+        }
+    }
     //titre des projets
     h1{
-        font-size: 2rem;
+        margin-top: 7vh;
+        font-size: clamp(1rem, #{"-.8rem + 8vw"}, 2rem);
     }
     // description des projets-perso
     .description{
         display: flex;
-        font-size: 1.3rem ;
+        font-size: clamp(.7rem, #{"-.8rem + 8.333vw"}, 1.3rem);
         color: rgb(80, 80, 80);
         width: 60%;
         margin: 0 auto;
@@ -62,20 +76,5 @@
     // effet sur le texte de l'article
     &:hover > .galerie_info {
         opacity: 1;
-    }
-
-    // titre projet
-    .galerie_info{
-        z-index: 2;
-        transition: .3s all ease-in;
-        position:absolute;
-        margin-top: 50px;
-        font-size: clamp(.5rem, #{"-.8rem + 8.333vw"}, 1rem);
-        color: black;
-        opacity: 0;
-        font-weight: bold;
-        &:hover{
-            cursor: pointer;
-        }
     }
 }

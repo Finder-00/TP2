@@ -1,6 +1,6 @@
 .site {
 	display: grid;
-	grid-template-columns: auto ($size__site-sidebar);
+	grid-template-columns: 100% 0%;
 	grid-template-areas:
 		"header header"
 		"main sidebar"
@@ -14,6 +14,12 @@
 .site-main {
 	grid-area: main;
 	overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
+}
+
+@include media-tablette{
+	.site {
+		grid-template-columns: auto ($size__site-sidebar);
+	}
 }
 
 .widget-area {

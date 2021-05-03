@@ -36,20 +36,20 @@ function monAjax(){
  */
 
 let bout_ajout = document.getElementById('bout-rapide');
-bout_ajout.addEventListener('mousedown', ()=>{
+bout_ajout.addEventListener('mousedown', function(){
     let monArticle = {
         'title' : document.querySelector('.admin-rapide [name="title"]').value,
         'content' : document.querySelector('.admin-rapide [name="content"]').value,
         'status' : "publish",
-        'categories' : [33]
+        'categories' : [3] // pour moi no3 dans phpMyAdmin
     }
     // on soummet les valeur de l'article par requette XML
     let creeArtcile = new XMLHttpRequest();
     creeArtcile.open("POST", monObjJS.siteURL + 'wp-json/wp/v2/posts');
     creeArtcile.setRequestHeader('X-WP-Nonce', monObjJS);
-    creeArtcile.setRequestHeader('Content-type', 'application/json;charset=UTF-8');
+    creeArtcile.setRequestHeader('Content-type', 'application/json;charset=UTF8-8');
     creeArtcile.send(JSON.stringify(monArticle));
-    creeArtcile.onreadystatechange = ()=> {
+    creeArtcile.onreadystatechange = function(){
         if(creeArtcile.readyState == 4){
             if(creeArtcile.status == 201){
                 document.querySelector('.admin-rapide [name="title"]').value = ''

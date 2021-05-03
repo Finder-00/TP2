@@ -20,8 +20,16 @@
 
 }
 .galerie{
-    width: 78vw;
+    width: 100vw;
 }
+@include media-tablette{
+    .galerie{
+        width: 78vw;
+    }   
+}
+
+
+
 // section contenant tout projet
 .galerie,.galerie-frontPage{
     background-color: rgb(36, 78, 119);
@@ -46,6 +54,21 @@
         a img{
             transition: all .2s ease-out;
             border-radius: 10px;
+        }
+
+        // titre projet
+        .galerie_info{
+            z-index: 2;
+            transition: .3s all ease-in;
+            position:absolute;
+            margin-top: 50px;
+            font-size: clamp(.5rem, #{"-.8rem + 8.333vw"}, 1rem);
+            color: black;
+            opacity: 0;
+            font-weight: bold;
+            &:hover{
+                cursor: pointer;
+            }
         }
 
         // dos des projet
@@ -75,21 +98,6 @@
         // effet sur le texte de l'article
         &:hover > .galerie_info {
             opacity: 1;
-        }
-
-        // titre projet
-        .galerie_info{
-            z-index: 2;
-            transition: .3s all ease-in;
-            position:absolute;
-            margin-top: 50px;
-            font-size: clamp(.5rem, #{"-.8rem + 8.333vw"}, 1rem);
-            color: black;
-            opacity: 0;
-            font-weight: bold;
-            &:hover{
-                cursor: pointer;
-            }
         }
     }
 }

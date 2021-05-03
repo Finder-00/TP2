@@ -19,9 +19,9 @@
 
 	<?php wp_head(); ?>
 </head>
-
-<body <?php body_class( body_class(is_front_page() ? 'no-sidebar' : ''))?> >
-<?php wp_body_open(); ?>
+<!-- a voir, wp_is_mobile pour masquer le sidebar en mobile -->
+<body <?php body_class( body_class(is_front_page() && !wp_is_mobile() ? 'no-sidebar' : ''))?> >
+<?php wp_body_open();?>
 <!-- si front page masque le sidebar  -->
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'theme-4w4' ); ?></a>
