@@ -105,67 +105,14 @@ clip-path: circle(26.4% at 13% 18%);
     }
 }
 
-.entry-title{ // titre des articles
-    color: rgb(24, 54, 79);
-    background-color: rgb(255, 255, 255);
-    border-bottom: 3px solid;
-}
-
-.entry-content{ // les articles des cours 
-    width: 90vw;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    font-size: clamp(.9rem, #{"-.8rem + 8.333vw"}, 1.5rem);
-    color: rgb(24, 54, 79);
-    background: rgb(244, 244, 244);
-    border-radius: 10px;
-    p{
-        margin: 5% 0 10px 0;
-        font-weight: bold;
-        width: 100%;
-    }
-    ul{
-        margin: 10px 0;
-        padding: 0;
-        list-style-type: none;
-    }
-
-    .wp-block-image{
-        align-self: center;
-        margin: 0 0 0 0px;
-    }
-    img{
-        display: block;
-        border-radius: 10px;
-    }
-
-    @include media-desktop{
-        flex-direction: row;
-        text-align: start;
-        .blocks-gallery-item figure{
-            margin: 0 0 0 5%;
-            width: 400px;
-            height: 400px;
-        }
-        p{
-            margin: 5%;
-        }
-        ul{
-            margin-right: 5vh;
-            width: 150px;
-        }
-    }// fin media-desktop
-} // fin .entry-content
-
-/*span{ // ligne de separation des section
+/*span{ // ligne de separation des section, ne fonctionne plus
     display: block;
     margin: 10% 0 0 0;
     width: 90vw;
     margin: 0 auto;
     border-bottom: 3px solid lightcoral;
 }*/
+
 .article-menu{ //grosse section contenant tout les articles
     width: 100vw;
     display: flex;

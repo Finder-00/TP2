@@ -3,10 +3,10 @@
 	.site {
 		display: grid;
 		grid-template-columns: auto;
-		grid-template-areas:
+		/*grid-template-areas: // produisait une sur-extention en bas de page pour Accueil
 			"header"
 			"main"
-			"footer";
+			"footer";*/
 	}
 }
 

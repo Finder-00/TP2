@@ -1,0 +1,76 @@
+.site-main{
+    background-color: #001A27;
+}
+
+.entry-title{ // titre des articles
+    margin-right: 35vw;
+    padding-left: 4vw;
+    font-size: clamp(.7rem, #{"-.8rem + 8.333vw"}, 1.3rem);
+    color: rgb(138, 228, 100);
+    border-bottom: 3px solid;
+    a{
+        text-decoration: none ;
+        color: rgb(138, 228, 100);
+        &:hover{color: rgb(116, 193, 84);}
+    }
+
+    @include media-tablette{
+        font-size: clamp(1rem, #{"-.8rem + 8.333vw"}, 1.6rem);
+    }
+}
+
+.entry-content{ // les articles des cours 
+    width: 90vw;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: clamp(.9rem, #{"-.8rem + 8.333vw"}, 1.3rem);
+
+    color: rgb(138, 228, 100);
+    background: rgb(24, 54, 79);
+    p{
+        margin: 20px 0 20px 0px;
+        font-weight: normal;
+        width: 100%;
+    }
+    ul{
+        margin: 10px 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    .wp-block-image{
+        align-self: center;
+        margin: 0 0 0 0px;
+    }
+    img{
+        display: block;
+        border-radius: 10px;
+    }
+
+    @include media-tablette{
+        flex-direction: row;
+        text-align: start;
+        width: 70vw;
+        margin: 0 0 0 4vw;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-size: clamp(.9rem, #{"-.8rem + 8.333vw"}, 1.3rem);
+        .blocks-gallery-item figure{
+            margin: 0 0 0 5%;
+            width: 400px;
+            height: 400px;
+        }
+        p{
+            margin: 20px 5px;
+        }
+        ul{
+            margin-right: 5vh;
+            width: 150px;
+        }
+    }// fin media-desktop
+}// fin .entry-content

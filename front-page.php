@@ -69,6 +69,7 @@ get_header();
 		<?php endif; ?> <!-- fin if (Have post())-->
 			
 			<!-- Formulaire qui ajoute des nouvelles -->
+			<?php if(current_user_can( 'administrator')) : ?>
 			<section class="admin-rapide">
 				<h3>Ajouter une nouvelle</h3>
 				<input type="text" name="title" placeholder="titre">
@@ -76,7 +77,9 @@ get_header();
 				<button id="bout-rapide">Ajouter la nouvelle</button>
 				<?php ?>
 			</section>
+			<?php endif;?>
 			
+			<!-- Affiche les 3 derniere nouvelles -->
 			<section class="nouvelles">	
 				<button id="bout_nouvelles"> Afficher les 3 dernières nouvelles</button>
 				<section></section>
