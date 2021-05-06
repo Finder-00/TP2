@@ -1437,6 +1437,7 @@ body.home::after {
 
 .article-menu section.bloc svg {
   position: absolute;
+  overflow: hidden;
   width: 100%;
   bottom: 0;
   border-radius: 10px;
@@ -1477,7 +1478,12 @@ body.home::after {
 }
 
 .article-menu section.bloc .Conception {
-  background-color: #fcb6b6;
+  background-color: #ffd8ca;
+}
+
+.article-menu section.bloc .Conception svg {
+  left: -10vw;
+  height: 100%;
 }
 
 .article-menu section.bloc .Conception p {
@@ -1485,7 +1491,7 @@ body.home::after {
 }
 
 .article-menu section.bloc .Conception a {
-  color: #3b70a9;
+  color: #549ce9;
 }
 
 .article-menu section.bloc .Conception:hover {
@@ -1752,17 +1758,17 @@ body.home::after {
   margin-right: 35vw;
   padding-left: 4vw;
   font-size: clamp(0.7rem, -.8rem + 8.333vw, 1.3rem);
-  color: #8ae464;
+  color: #64d5ee;
   border-bottom: 3px solid;
 }
 
 .entry-title a {
   text-decoration: none;
-  color: #8ae464;
+  color: #64d5ee;
 }
 
 .entry-title a:hover {
-  color: #74c154;
+  color: #5bbfd5;
 }
 
 @media (min-width: 750px) {
@@ -1780,7 +1786,7 @@ body.home::after {
   flex-direction: column;
   text-align: center;
   font-size: clamp(0.9rem, -.8rem + 8.333vw, 1.3rem);
-  color: #8ae464;
+  color: #43a9c1;
   background: #18364f;
 }
 
@@ -2201,42 +2207,46 @@ body.home::after {
   background-color: #bb374b;
 }
 
-.home .nouvelles {
+.conteneurBoutNouvelle {
+  display: flex;
+}
+
+.derniereNouvelles {
   width: 100vw;
   display: flex;
   flex-direction: column;
   margin: 2px;
 }
 
-.home .nouvelles #bout_nouvelles {
+.derniereNouvelles #bout_nouvelles {
   height: 50px;
   width: 300px;
-  margin: 5vh 0 15vh 4vw;
+  margin: 1vh 0 15vh 4vw;
   border: none;
   font-weight: bold;
-  background-color: #ff4c67;
+  background-color: #573da7;
   color: white;
   border-radius: 10px;
   transition: all .3s;
 }
 
-.home .nouvelles #bout_nouvelles:hover {
+.derniereNouvelles #bout_nouvelles:hover {
   box-shadow: rgba(255, 76, 103, 0.187) 0px 10px 15px;
   transform: scale(102%);
   cursor: pointer;
 }
 
-.home .nouvelles section {
+.derniereNouvelles section {
   margin-left: 4vw;
 }
 
-.home .nouvelles section h2 {
+.derniereNouvelles section h2 {
   color: #ff4c67;
   font-size: 2rem;
   margin-bottom: 5px;
 }
 
-.home .nouvelles section p {
+.derniereNouvelles section p {
   color: white;
 }
 
@@ -2350,6 +2360,21 @@ footer{ // class du footer
   width: 110px;
 }
 
+@media (min-width: 1100px) {
+  .site-footer .ligne-footer #search-2 h2 {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+  }
+  .site-footer .ligne-footer #search-2 .search-field {
+    width: 300px;
+    border-radius: 0px;
+  }
+  .site-footer .ligne-footer #search-2 input[type="submit"] {
+    font-size: clamp(0.8rem, 4vw, 1.1rem);
+    height: 40px;
+    width: 150px;
+  }
+}
+
 .site-footer .ligne-footer #gallery-1 {
   margin: 0 20px;
   display: flex;
@@ -2369,22 +2394,7 @@ footer{ // class du footer
   margin: 0 20px;
 }
 
-@media (min-width: 750px) {
-  .site-footer #search-2 {
-    margin-top: 7%;
-  }
-  .site-footer #search-2 h2 {
-    font-size: clamp(1rem, 2vw, 1.5rem) !important;
-  }
-  .site-footer #search-2 .search-field {
-    width: 300px;
-    border-radius: 0px;
-  }
-  .site-footer #search-2 input[type="submit"] {
-    font-size: clamp(1rem, 3vw, 1.4rem);
-    height: 40px;
-    width: 150px;
-  }
+@media (min-width: 1100px) {
   .site-footer #gallery-1 {
     display: flex;
   }

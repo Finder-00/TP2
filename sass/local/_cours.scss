@@ -6,12 +6,12 @@
     margin-right: 35vw;
     padding-left: 4vw;
     font-size: clamp(.7rem, #{"-.8rem + 8.333vw"}, 1.3rem);
-    color: rgb(138, 228, 100);
+    color: rgb(100, 213, 238);
     border-bottom: 3px solid;
     a{
         text-decoration: none ;
-        color: rgb(138, 228, 100);
-        &:hover{color: rgb(116, 193, 84);}
+        color: rgb(100, 213, 238);
+        &:hover{color: rgb(91, 191, 213);}
     }
 
     @include media-tablette{
@@ -29,7 +29,7 @@
     text-align: center;
     font-size: clamp(.9rem, #{"-.8rem + 8.333vw"}, 1.3rem);
 
-    color: rgb(138, 228, 100);
+    color: rgb(67, 169, 193);
     background: rgb(24, 54, 79);
     p{
         margin: 20px 0 20px 0px;

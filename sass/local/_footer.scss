@@ -99,7 +99,24 @@ footer{ // class du footer
                 height: 40px;
                 width: 110px;
             }
+
+            @include media-desktop{
+                h2{
+                    font-size: clamp(1rem, 2vw , 1.5rem);
+                }
+                .search-field{
+                    width: 300px;
+                    border-radius: 0px;
+                }
+                //bouton
+                input[type="submit"]{
+                    font-size: clamp(.8rem, 4vw , 1.1rem);
+                    height: 40px;
+                    width: 150px;
+                }
+            }
         }
+
         //conteneur image
         #gallery-1{
             margin: 0 20px;
@@ -121,25 +138,7 @@ footer{ // class du footer
         }
     }
 
-
-    @include media-tablette{
-        // barre de recherche
-        #search-2{
-            margin-top: 7%;
-            h2{
-                font-size: clamp(1rem, 2vw , 1.5rem) !important;
-            }
-            .search-field{
-                width: 300px;
-                border-radius: 0px;
-            }
-            //bouton
-            input[type="submit"]{
-                font-size: clamp(1rem, 3vw , 1.4rem);
-                height: 40px;
-                width: 150px;
-            }
-        }
+    @include media-desktop{
         //conteneur image
         #gallery-1{
             display: flex;
@@ -154,4 +153,7 @@ footer{ // class du footer
             margin: 0 20px;
         }
     }
+
+
+
 }

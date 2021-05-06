@@ -1,4 +1,8 @@
-.home .nouvelles{
+.conteneurBoutNouvelle{
+    display: flex;
+}
+
+.derniereNouvelles{
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -7,10 +11,10 @@
     #bout_nouvelles{
         height: 50px;
         width: 300px;
-        margin: 5vh 0 15vh 4vw;
+        margin: 1vh 0 15vh 4vw;
         border: none;
         font-weight: bold;
-        background-color: rgb(255, 76, 103);
+        background-color: rgb(87, 61, 167);
         color: white;
         border-radius: 10px;
         transition: all .3s;
