@@ -1,33 +1,41 @@
 .admin-rapide{
+    width: 55vw;
     margin-left:4vw;
-    display: block;
+    margin-bottom: 15vh;
     h3{
         color: white;
     }
-    // titre nouvelle
-    input{
-        margin-bottom: 10px;
-        width: 200px;
-        border-radius: 0px;
-        background-color: rgb(21, 51, 82);
-        color: white;
-        text-decoration: none;
-        border-style: none;
-        border-bottom: 2px solid #ffffff;
-        &:focus{
-            outline-style: none;
+    .champEcritureNouv{
+        display: flex;
+        flex-direction: column;
+        // titre nouvelle
+        input{
+            margin-bottom: 10px;
+            width: 200px;
+            border-radius: 0px;
+            background-color: rgb(21, 51, 82);
             color: white;
+            text-decoration: none;
+            border-style: none;
+            border-bottom: 2px solid #ffffff;
+            &:focus{
+                outline-style: none;
+                color: white;
+            }
+        }
+        // contenue du texte
+        textarea{
+            width: 500px;
+            height: 100px;
+            margin-bottom: 15px;
+            border-radius: 7px;
+            border-color: rgb(32, 100, 169) 3px;
+            &:focus{
+                outline-style: none;
+            }
         }
     }
-    // contenue du texte
-    textarea{
-        margin-bottom: 15px;
-        border-radius: 7px;
-        border-color: rgb(32, 100, 169) 3px;
-        &:focus{
-            outline-style: none;
-        }
-    }
+    
     //bouton ajouter la nouvelle
     button{
         border-radius: 100px;
@@ -36,13 +44,28 @@
         border-style: none;
         height: 40px;
         width: 200px;
+        transition: all .1s ease-out;
         &:hover{
             cursor: pointer;
-            background-color: rgb(223, 63, 87);
+            transform: scale(101%);
+            background-color: rgb(228, 66, 90);
         }
         &:active{
-            transform: scale(96%);
+            transform: scale(99%);
             background-color: rgb(187, 55, 75);
         }
+    }
+}
+
+// contient les 3 articles
+.contenuNouvelles{
+margin-left: 4vw;
+    h2{
+        color: rgb(255, 76, 103);
+        font-size: 2rem;
+        margin-bottom: 5px;
+    }
+    p{
+        color: white;
     }
 }

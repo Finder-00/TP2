@@ -72,21 +72,22 @@ get_header();
 			<?php if(current_user_can( 'administrator')) : ?>
 			<section class="admin-rapide">
 				<h3>Ajouter une nouvelle</h3>
-				<input type="text" name="title" placeholder="titre">
-				<textarea name="content"></textarea>
+				<div class="champEcritureNouv">
+					<input type="text" name="title" placeholder="titre">
+					<textarea name="content"></textarea>
+				</div>
 				<?php endif;?>
 				<!-- Affiche les 3 derniere nouvelles et publie une nouvelle -->
 				<div class="conteneurBoutNouvelle">
-
 					<section class="derniereNouvelles">	
 						<button id="bout_nouvelles"> Afficher les 3 dernières nouvelles</button>
-						<section></section>
 					</section>
 
 					<?php if(current_user_can( 'administrator')) : ?>
 						<button id="bout-rapide">Ajouter la nouvelle</button>
 					<?php endif;?>
 				</div>
+				<section class="contenuNouvelles"></section>
 				<?php ?>
 			</section>
 
