@@ -1,10 +1,10 @@
 .admin-rapide{
     margin-left:4vw;
     display: block;
-    // width: 100vw;
     h3{
         color: white;
     }
+    // titre nouvelle
     input{
         margin-bottom: 10px;
         width: 200px;
@@ -14,12 +14,21 @@
         text-decoration: none;
         border-style: none;
         border-bottom: 2px solid #ffffff;
+        &:focus{
+            outline-style: none;
+            color: white;
+        }
     }
+    // contenue du texte
     textarea{
         margin-bottom: 15px;
         border-radius: 7px;
         border-color: rgb(32, 100, 169) 3px;
+        &:focus{
+            outline-style: none;
+        }
     }
+    //bouton ajouter la nouvelle
     button{
         border-radius: 100px;
         color: white;

@@ -2167,10 +2167,19 @@ body.home::after {
   border-bottom: 2px solid #ffffff;
 }
 
+.admin-rapide input:focus {
+  outline-style: none;
+  color: white;
+}
+
 .admin-rapide textarea {
   margin-bottom: 15px;
   border-radius: 7px;
   border-color: #2064a9 3px;
+}
+
+.admin-rapide textarea:focus {
+  outline-style: none;
 }
 
 .admin-rapide button {
@@ -2311,8 +2320,12 @@ footer{ // class du footer
   color: white;
 }
 
+.site-footer .ligne-footer #search-2 h2 {
+  font-size: clamp(0.9rem, 5vw, 1.2rem);
+}
+
 .site-footer .ligne-footer #search-2 .search-field {
-  width: 300px;
+  width: 200px;
   border-radius: 0px;
   background-color: antiquewhite;
   text-decoration: none;
@@ -2320,23 +2333,64 @@ footer{ // class du footer
   border-bottom: 2px solid #c24163;
 }
 
+.site-footer .ligne-footer #search-2 form {
+  display: flex;
+  justify-content: center;
+}
+
 .site-footer .ligne-footer #search-2 input[type="submit"] {
+  margin-left: 3vw;
   padding-top: -20px !important;
   border-radius: 100px;
   color: white;
   background-color: #ff4c67;
   border-style: none;
+  font-size: clamp(0.8rem, 3vw, 1rem);
   height: 40px;
-  width: 150px;
+  width: 110px;
 }
 
 .site-footer .ligne-footer #gallery-1 {
   margin: 0 20px;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.site-footer .ligne-footer img {
-  width: 150px;
+.site-footer .ligne-footer #gallery-1 figure {
+  width: inherit;
+}
+
+.site-footer .ligne-footer #gallery-1 img {
+  width: 25vw;
+}
+
+.site-footer .ligne-footer:nth-child(2) h2 {
+  margin: 0 20px;
+}
+
+@media (min-width: 750px) {
+  .site-footer #search-2 {
+    margin-top: 7%;
+  }
+  .site-footer #search-2 h2 {
+    font-size: clamp(1rem, 2vw, 1.5rem) !important;
+  }
+  .site-footer #search-2 .search-field {
+    width: 300px;
+    border-radius: 0px;
+  }
+  .site-footer #search-2 input[type="submit"] {
+    font-size: clamp(1rem, 3vw, 1.4rem);
+    height: 40px;
+    width: 150px;
+  }
+  .site-footer #gallery-1 {
+    display: flex;
+  }
+  .site-footer #gallery-1 img {
+    width: 10vw !important;
+  }
 }
 
 .site-footer .ligne-footer:nth-child(2) h2 {
