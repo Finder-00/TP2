@@ -17,6 +17,7 @@
             background-color: rgb(21, 51, 82);
             color: white;
             text-decoration: none;
+            font-weight: bold;
             border-style: none;
             border-bottom: 2px solid #ffffff;
             &:focus{
@@ -31,7 +32,10 @@
             margin-bottom: 15px;
             border-radius: 7px;
             border: rgb(32, 100, 169) 3px;
+            background-color: rgb(215, 214, 242);
+            resize: vertical;
             &:focus{
+                background-color: rgb(223, 222, 255);
                 outline-style: none;
             }
         }
@@ -67,7 +71,7 @@
                 background-color: rgb(187, 55, 75);
             }
             @include media-desktop{
-                width: 10vw;
+                width: 12vw;
             }
         }
     } // fin conteneurBoutNouvelle : Bouton regroupant 3 dernieres nouvelles & ajouter nouvelle
@@ -119,4 +123,9 @@
         margin-bottom: 5px;
     }
     p{ color: white }
+}
+
+.annonce{
+    width: 100vw;
+    background-color: rgb(255, 102, 85);
 }
