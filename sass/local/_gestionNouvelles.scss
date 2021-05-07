@@ -1,0 +1,122 @@
+.admin-rapide{
+    // width: 55vw;
+    margin-left:4vw;
+    margin-bottom: 15vh;
+
+    // Gros titre 'Ajouter une nouvelle'
+    h3{ color: white; }
+    // champ pour ecrire une nouvelle (nececite acces admin)
+    .champEcritureNouv{
+        display: flex;
+        flex-direction: column;
+        // titre nouvelle
+        input{
+            margin-bottom: 10px;
+            width: 200px;
+            border-radius: 0px;
+            background-color: rgb(21, 51, 82);
+            color: white;
+            text-decoration: none;
+            border-style: none;
+            border-bottom: 2px solid #ffffff;
+            &:focus{
+                outline-style: none;
+                color: white;
+            }
+        }
+        // contenue du texte
+        textarea{
+            width: 500px;
+            height: 100px;
+            margin-bottom: 15px;
+            border-radius: 7px;
+            border: rgb(32, 100, 169) 3px;
+            &:focus{
+                outline-style: none;
+            }
+        }
+    } // fin champ d'ecriture d'une nouvelle
+
+    // Bouton regroupant 3 dernieres nouvelles & ajouter nouvelle
+    .conteneurBoutNouvelle{
+        // width: 55vw;
+        display: flex;
+        align-items: center;
+
+        // voir bas de page pour bouton affiche 3 derniere nouvelle
+        // voir bas de page pour contenus nouvelles
+
+        //bouton pour ajouter la nouvelle
+        #bout-rapide{
+            border-radius: 100px;
+            color: white;
+            background-color: rgb(255, 76, 103);
+            border-style: none;
+            height: 40px;
+            width: 30vw;
+            margin-left: 15px;
+            font-size:clamp(.7rem, #{"-.5rem + 5vw"}, .95rem) ;
+            transition: all .1s ease-out;
+            &:hover{
+                cursor: pointer;
+                transform: scale(101%);
+                background-color: rgb(228, 66, 90);
+            }
+            &:active{
+                transform: scale(99%);
+                background-color: rgb(187, 55, 75);
+            }
+            @include media-desktop{
+                width: 10vw;
+            }
+        }
+    } // fin conteneurBoutNouvelle : Bouton regroupant 3 dernieres nouvelles & ajouter nouvelle
+
+} // fin section admin-rapide
+
+
+// obliger de les mettre hors champ a cause des condition php
+// bouton 3 derniere nouvelle
+.derniereNouvelles,.derniereNouvellesMarge{
+    display: flex;
+    flex-direction: column;
+    margin-right:20px;
+
+    #bout_nouvelles{
+        height: 50px;
+        width: 32vw;
+        margin: 1vh 0 0 0vw;
+        border: none;
+        background-color: rgb(97, 66, 189);
+        color: white;
+        font-size: clamp(.7rem, #{"-.5rem + 5vw"}, .95rem);
+        border-radius: 2px;
+        transition: all .1s;
+        &:hover{
+            transform: scale(101%);
+            background-color: rgb(104, 70, 206);
+            cursor: pointer;
+        }
+        &:focus{
+            transform: scale(99%);
+            background-color: rgb(86, 59, 160);
+        }
+        @include media-desktop{
+            width: 15vw;
+        }
+    }
+}
+.derniereNouvellesMarge{
+    margin-left: 5vw;
+}
+
+  // section contenant les 3 articles
+  .contenuNouvelles{
+    margin-left: 4vw;
+    h2{
+        color: rgb(255, 76, 103);
+        font-size: 2rem;
+        margin-bottom: 5px;
+    }
+    p{ color: white }
+}

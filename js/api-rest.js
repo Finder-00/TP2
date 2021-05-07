@@ -1,6 +1,6 @@
     (function(){
     let bouton = document.getElementById('bout_nouvelles');
-    let nouvelles = document.querySelector('.admin-rapide .contenuNouvelles');
+    let nouvelles = document.querySelector('.contenuNouvelles');
     bouton.addEventListener('mousedown', monAjax);
 
     // Ajax = Asynchronous JavaScript + XML

@@ -2154,7 +2154,6 @@ body.home::after {
 }
 
 .admin-rapide {
-  width: 55vw;
   margin-left: 4vw;
   margin-bottom: 15vh;
 }
@@ -2189,32 +2188,84 @@ body.home::after {
   height: 100px;
   margin-bottom: 15px;
   border-radius: 7px;
-  border-color: #2064a9 3px;
+  border: #2064a9 3px;
 }
 
 .admin-rapide .champEcritureNouv textarea:focus {
   outline-style: none;
 }
 
-.admin-rapide button {
+.admin-rapide .conteneurBoutNouvelle {
+  display: flex;
+  align-items: center;
+}
+
+.admin-rapide .conteneurBoutNouvelle #bout-rapide {
   border-radius: 100px;
   color: white;
   background-color: #ff4c67;
   border-style: none;
   height: 40px;
-  width: 200px;
+  width: 30vw;
+  margin-left: 15px;
+  font-size: clamp(0.7rem, -.5rem + 5vw, 0.95rem);
   transition: all .1s ease-out;
 }
 
-.admin-rapide button:hover {
+.admin-rapide .conteneurBoutNouvelle #bout-rapide:hover {
   cursor: pointer;
   transform: scale(101%);
   background-color: #e4425a;
 }
 
-.admin-rapide button:active {
+.admin-rapide .conteneurBoutNouvelle #bout-rapide:active {
   transform: scale(99%);
   background-color: #bb374b;
+}
+
+@media (min-width: 1100px) {
+  .admin-rapide .conteneurBoutNouvelle #bout-rapide {
+    width: 10vw;
+  }
+}
+
+.derniereNouvelles, .derniereNouvellesMarge {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+.derniereNouvelles #bout_nouvelles, .derniereNouvellesMarge #bout_nouvelles {
+  height: 50px;
+  width: 32vw;
+  margin: 1vh 0 0 0vw;
+  border: none;
+  background-color: #6142bd;
+  color: white;
+  font-size: clamp(0.7rem, -.5rem + 5vw, 0.95rem);
+  border-radius: 2px;
+  transition: all .1s;
+}
+
+.derniereNouvelles #bout_nouvelles:hover, .derniereNouvellesMarge #bout_nouvelles:hover {
+  transform: scale(101%);
+  background-color: #6846ce;
+  cursor: pointer;
+}
+
+.derniereNouvelles #bout_nouvelles:focus, .derniereNouvellesMarge #bout_nouvelles:focus {
+  transform: scale(99%);
+  background-color: #563ba0;
+}
+
+@media (min-width: 1100px) {
+  .derniereNouvelles #bout_nouvelles, .derniereNouvellesMarge #bout_nouvelles {
+    width: 15vw;
+  }
+}
+
+.derniereNouvellesMarge {
+  margin-left: 5vw;
 }
 
 .contenuNouvelles {
@@ -2229,41 +2280,6 @@ body.home::after {
 
 .contenuNouvelles p {
   color: white;
-}
-
-.conteneurBoutNouvelle {
-  width: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.conteneurBoutNouvelle .derniereNouvelles {
-  display: flex;
-  flex-direction: column;
-  margin: 2px;
-}
-
-.conteneurBoutNouvelle .derniereNouvelles #bout_nouvelles {
-  height: 50px;
-  width: 270px;
-  margin: 1vh 0 0 0vw;
-  border: none;
-  background-color: #6142bd;
-  color: white;
-  border-radius: 2px;
-  transition: all .1s;
-}
-
-.conteneurBoutNouvelle .derniereNouvelles #bout_nouvelles:hover {
-  transform: scale(101%);
-  background-color: #6846ce;
-  cursor: pointer;
-}
-
-.conteneurBoutNouvelle .derniereNouvelles #bout_nouvelles:focus {
-  transform: scale(99%);
-  background-color: #563ba0;
 }
 
 /*
@@ -2357,6 +2373,7 @@ footer{ // class du footer
   text-decoration: none;
   border-style: none;
   border-bottom: 2px solid #c24163;
+  outline: none;
 }
 
 .site-footer .ligne-footer #search-2 form {
