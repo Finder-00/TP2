@@ -1279,7 +1279,6 @@ body.home::after {
 
 @media (min-width: 1100px) {
   body.home::after {
-    background-image: url(https://e1938022.webdev.cmaisonneuve.qc.ca/4w4/wp-content/uploads/2021/04/ile-flotante-scaled.jpg);
     background-repeat: no-repeat;
     background-position: -10vh 0vw 0 0vw;
     background-size: 37%;
@@ -2154,8 +2153,15 @@ body.home::after {
 }
 
 .admin-rapide {
+  width: 85vw;
   margin-left: 4vw;
   margin-bottom: 15vh;
+}
+
+@media (min-width: 750px) {
+  .admin-rapide {
+    width: 40vw;
+  }
 }
 
 .admin-rapide h3 {
@@ -2185,7 +2191,7 @@ body.home::after {
 }
 
 .admin-rapide .champEcritureNouv textarea {
-  width: 500px;
+  width: 100%;
   height: 100px;
   margin-bottom: 15px;
   border-radius: 7px;
@@ -2202,6 +2208,8 @@ body.home::after {
 .admin-rapide .conteneurBoutNouvelle {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 0 12%;
 }
 
 .admin-rapide .conteneurBoutNouvelle #bout-rapide {
@@ -2211,7 +2219,7 @@ body.home::after {
   border-style: none;
   height: 40px;
   width: 30vw;
-  margin-left: 15px;
+  margin-right: 10%;
   font-size: clamp(0.7rem, -.5rem + 5vw, 0.95rem);
   transition: all .1s ease-out;
 }
@@ -2229,19 +2237,54 @@ body.home::after {
 
 @media (min-width: 1100px) {
   .admin-rapide .conteneurBoutNouvelle #bout-rapide {
-    width: 12vw;
+    width: 15vw;
+  }
+}
+
+.admin-rapide .conteneurBoutNouvelle #bout_Annonces {
+  background-color: #3dda83;
+  color: white;
+  border-style: none;
+  width: 30vw;
+  height: 40px;
+  margin-right: 10%;
+  border-radius: 100px;
+  font-size: clamp(0.7rem, -.5rem + 5vw, 0.95rem);
+  transition: all .1s ease-out;
+}
+
+.admin-rapide .conteneurBoutNouvelle #bout_Annonces:hover {
+  cursor: pointer;
+  transform: scale(101%);
+  background-color: #37e685;
+}
+
+.admin-rapide .conteneurBoutNouvelle #bout_Annonces:active {
+  transform: scale(99%);
+  background-color: #3dcd7d;
+}
+
+@media (min-width: 1100px) {
+  .admin-rapide .conteneurBoutNouvelle #bout_Annonces {
+    width: 15vw;
   }
 }
 
 .derniereNouvelles, .derniereNouvellesMarge {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  justify-self: center;
+  justify-items: center;
   margin-right: 20px;
+  margin-top: 10%;
 }
 
 .derniereNouvelles #bout_nouvelles, .derniereNouvellesMarge #bout_nouvelles {
   height: 50px;
-  width: 32vw;
+  width: 30vw;
   margin: 1vh 0 0 0vw;
   border: none;
   background-color: #6142bd;
@@ -2264,7 +2307,7 @@ body.home::after {
 
 @media (min-width: 1100px) {
   .derniereNouvelles #bout_nouvelles, .derniereNouvellesMarge #bout_nouvelles {
-    width: 15vw;
+    width: 18vw;
   }
 }
 
@@ -2287,8 +2330,11 @@ body.home::after {
 }
 
 .annonce {
+  padding: 1% 5vw;
+  text-align: center;
+  color: white;
   width: 100vw;
-  background-color: #ff6655;
+  background-color: #3dda83;
 }
 
 /*

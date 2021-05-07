@@ -81,13 +81,18 @@ get_header();
 				<?php endif;?>
 				<!-- Affiche les 3 derniere nouvelles et publie une nouvelle -->
 				<div class="conteneurBoutNouvelle">
-					<section <?php if(!current_user_can('administrator') ? print("class = derniereNouvellesMarge") : print('class = derniereNouvelles'))?> >	
-						<button id="bout_nouvelles"> Afficher les 3 dernières nouvelles</button>
-					</section>
 					<?php if(current_user_can( 'administrator')) : ?>
 						<button id="bout-rapide">Ajouter la nouvelle</button>
 					<?php endif;?>
+					<?php if(current_user_can( 'administrator')) : ?>
+						<button id="bout_Annonces">Ajouter l'annonce</button>
+					<?php endif;?>
 				</div>
+				<!-- affiche les 3 derniere nouvelles -->
+				<section class = "derniereNouvelles">	
+						<button id="bout_nouvelles"> Afficher dernières nouvelles</button>
+				</section>
+
 				<section class="contenuNouvelles"></section>
 				<?php ?>
 			</section>
