@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
-Theme Name: Arthur-Robitaille-4w4
+Theme Name: theme-4w4
 Theme URI: http://underscores.me/
 Author: finder
 Author URI: http://underscores.me/
@@ -1279,6 +1279,7 @@ body.home::after {
 
 @media (min-width: 1100px) {
   body.home::after {
+    background: "http://localhost:8888/4w4-tim/wp-content/uploads/2021/04/hello-Blue-1-dragged-scaled.jpg";
     background-repeat: no-repeat;
     background-position: -10vh 0vw 0 0vw;
     background-size: 37%;

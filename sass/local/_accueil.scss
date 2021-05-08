@@ -23,7 +23,7 @@ body.home::after{
     z-index: -1;
     background-color: #c8fdff;
     @include media-desktop{
-        background-image: "https://e1938022.webdev.cmaisonneuve.qc.ca/Arthur_Robitaille-4w4/wp-content/uploads/2021/04/roche-fish-eye2-scaled.jpg";
+        background: "http://localhost:8888/4w4-tim/wp-content/uploads/2021/04/hello-Blue-1-dragged-scaled.jpg";
         background-repeat: no-repeat;
         background-position: -10vh 0vw 0 0vw;
         background-size: 37%;
