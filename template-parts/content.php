@@ -18,15 +18,15 @@
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
+		// on enleve la date des articles
+		// if ( 'post' === get_post_type() ) :?>
+			<!-- <div class="entry-meta"> -->
 				<?php
-				theme_4w4_posted_on();
-				theme_4w4_posted_by();
+				// theme_4w4_posted_on();
+				// theme_4w4_posted_by();
 				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
+			<!-- </div>.entry-meta -->
+		<!-- <"?"php endif ?>-->
 	</header><!-- .entry-header -->
 
 	<?php theme_4w4_post_thumbnail(); ?>
@@ -57,7 +57,4 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php theme_4w4_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
