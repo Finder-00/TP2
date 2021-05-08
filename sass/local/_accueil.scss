@@ -23,10 +23,10 @@ body.home::after{
     z-index: -1;
     background-color: #c8fdff;
     @include media-desktop{
-        background: "http://localhost:8888/4w4-tim/wp-content/uploads/2021/04/hello-Blue-1-dragged-scaled.jpg";
+        background: url("https://e1938022.webdev.cmaisonneuve.qc.ca/Arthur_Robitaille-4w4/wp-content/uploads/2021/05/ordi3-scaled.jpg");
         background-repeat: no-repeat;
-        background-position: -10vh 0vw 0 0vw;
-        background-size: 37%;
+        background-position: -10vh 0vw 00vw;
+        background-size: 60%;
         clip-path: circle(26.4% at 13% 18%);
     }
 }
