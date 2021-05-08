@@ -2330,11 +2330,11 @@ body.home::after {
 }
 
 .annonce {
-  margin: 1% 0;
+  border-radius: 8px;
+  margin: 1% 10px;
   padding: 1% 5vw;
   text-align: center;
   color: white;
-  width: 100vw;
   background-color: #3dda83;
 }
 
