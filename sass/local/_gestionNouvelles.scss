@@ -108,7 +108,7 @@
 
 
 // obliger de les mettre hors champ a cause des condition php
-// bouton 3 derniere nouvelle
+// bouton afficher derniere nouvelle
 .derniereNouvelles,.derniereNouvellesMarge{
     display: flex;
     flex-direction: column;
@@ -122,7 +122,7 @@
 
     #bout_nouvelles{
         height: 50px;
-        width: 30vw;
+        width: 35vw;
         margin: 1vh 0 0 0vw;
         border: none;
         background-color: rgb(97, 66, 189);
@@ -139,13 +139,16 @@
             transform: scale(99%);
             background-color: rgb(86, 59, 160);
         }
+        @include media-tablette{
+            width: 25vw;
+        }
         @include media-desktop{
             width: 18vw;
         }
     }
 }
 .derniereNouvellesMarge{
-    margin-left: 5vw;
+    margin: 7% 0 7% 5vw;
 }
 
   // section contenant les 3 articles

@@ -89,7 +89,7 @@ get_header();
 					<?php endif;?>
 				</div>
 				<!-- affiche les 3 derniere nouvelles -->
-				<section class = "derniereNouvelles">	
+				<section <?php if(!current_user_can('administrator') ? print("class = derniereNouvellesMarge") : print('class = derniereNouvelles'))?>>	
 						<button id="bout_nouvelles"> Afficher dernières nouvelles</button>
 				</section>
 

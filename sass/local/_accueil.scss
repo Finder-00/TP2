@@ -157,11 +157,11 @@ clip-path: circle(26.4% at 13% 18%);
             p{ // infos haut & bas cellule
                 font-size:clamp(.6rem, 3vw , .9rem) ;
                 color: lightcoral;
+                margin-bottom: 1vh;
             }
             a{ // lien cours
                 font-size: clamp(.85rem, #{"-.5rem + 5vw"}, 1.2rem);
                 font-weight: bold;
-                // color: rgb(201, 244, 244);
                 color: white;
                 text-decoration: none;
                 &:hover{

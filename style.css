@@ -793,6 +793,19 @@ textarea {
   /* fin ul principale*/
 }
 
+.main-navigation ul > li:first-of-type {
+  width: 75px;
+  margin-left: 7px;
+}
+
+.main-navigation ul > li:first-of-type:hover {
+  background-color: rgba(0, 195, 255, 0);
+}
+
+.main-navigation ul ul > li:first-of-type {
+  width: auto;
+}
+
 .main-navigation ul {
   /* nav - menu (ul principal) */
   background-color: #c8fdff;
@@ -1421,6 +1434,7 @@ body.home::after {
 .article-menu section.bloc article p {
   font-size: clamp(0.6rem, 3vw, 0.9rem);
   color: lightcoral;
+  margin-bottom: 1vh;
 }
 
 .article-menu section.bloc article a {
@@ -1863,18 +1877,18 @@ body.home::after {
 
 #burger div:nth-of-type(1) {
   clip-path: polygon(0 15%, 100% 15%, 100% 25%, 0 25%);
-  background-color: #1e2363;
+  background-color: #4e1ebd;
 }
 
 #burger div:nth-of-type(2) {
   clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
-  background-color: #1e2363;
+  background-color: #4e1ebd;
   z-index: -1;
 }
 
 #burger div:nth-of-type(3) {
   clip-path: polygon(0 75%, 100% 75%, 100% 85%, 0 85%);
-  background-color: #1e2363;
+  background-color: #4e1ebd;
 }
 
 /*--------- Animation barre 1 */
@@ -2284,7 +2298,7 @@ body.home::after {
 
 .derniereNouvelles #bout_nouvelles, .derniereNouvellesMarge #bout_nouvelles {
   height: 50px;
-  width: 30vw;
+  width: 35vw;
   margin: 1vh 0 0 0vw;
   border: none;
   background-color: #6142bd;
@@ -2305,6 +2319,12 @@ body.home::after {
   background-color: #563ba0;
 }
 
+@media (min-width: 750px) {
+  .derniereNouvelles #bout_nouvelles, .derniereNouvellesMarge #bout_nouvelles {
+    width: 25vw;
+  }
+}
+
 @media (min-width: 1100px) {
   .derniereNouvelles #bout_nouvelles, .derniereNouvellesMarge #bout_nouvelles {
     width: 18vw;
@@ -2312,7 +2332,7 @@ body.home::after {
 }
 
 .derniereNouvellesMarge {
-  margin-left: 5vw;
+  margin: 7% 0 7% 5vw;
 }
 
 .contenuNouvelles {

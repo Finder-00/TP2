@@ -30,8 +30,8 @@ function monAjax(requete, elmDom){
             let data = JSON.parse(maRequete.responseText);
             chaineResultat = ''
             for(const elm of data){
-                chaineResultat += '<h2>' + elm.title.rendered + '</h2>';
-                chaineResultat += elm.content.rendered;
+                chaineResultat += '<section>'+'<h2>' + elm.title.rendered + '</h2>';
+                chaineResultat += elm.content.rendered +'</section>' ;
             }
             elmDom.innerHTML = chaineResultat;
         }
@@ -68,7 +68,7 @@ bout_ajout.addEventListener('mousedown', function(){
         console.log(monArticle);
         if(creeArticle.readyState == 4){
             if(creeArticle.status == 201){
-                document.querySelector('.admin-rapide [name="title"]').value = ''
+                document.querySelector('.admin-rapide [name="title"]').value = '';
                 document.querySelector('.admin-rapide [name="content"]').value = '';
             }
             else{
@@ -80,7 +80,7 @@ bout_ajout.addEventListener('mousedown', function(){
 
 
 /*------------------------------------
- * Controle du formulaire qui ajoute une annonce a partir du site pour l'admin
+ * Controle du formulaire qui ajoute une annonce
 -------------------------------------*/
 
 boutonAnnonce.addEventListener('mousedown', function(){
@@ -101,7 +101,7 @@ boutonAnnonce.addEventListener('mousedown', function(){
         if(creeArticle.readyState == 4){
             if(creeArticle.status == 201){
                 document.querySelector('.admin-rapide [name="title"]').value = ''
-                document.querySelector('.admin-rapide [name="content"]').value = '';
+                document.querySelector('.admin-rapide [name="content"]').value = ''
             }
             else{
                 alert('erreur ' + creeArticle.status);

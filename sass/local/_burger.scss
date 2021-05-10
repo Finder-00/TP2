@@ -19,16 +19,16 @@ $epaisseur: 5%;
         height: 100%;
         &:nth-of-type(1){
             clip-path: polygon(0 15%, 100% 15%, 100% 25%, 0 25%);
-            background-color: rgb(30, 35, 99);
+            background-color: rgb(78, 30, 189);
         }
         &:nth-of-type(2){
             clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
-            background-color: rgb(30, 35, 99);
+            background-color: rgb(78, 30, 189);
             z-index: -1;
         }
         &:nth-of-type(3){
             clip-path: polygon(0 75%, 100% 75%, 100% 85%, 0 85%);
-            background-color: rgb(30, 35, 99);
+            background-color: rgb(78, 30, 189);
         }
     }
 }
