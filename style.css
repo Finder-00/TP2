@@ -1279,7 +1279,6 @@ body.home::after {
 
 @media (min-width: 1100px) {
   body.home::after {
-    background: url("https://e1938022.webdev.cmaisonneuve.qc.ca/Arthur_Robitaille-4w4/wp-content/uploads/2021/05/ordi3-scaled.jpg");
     background-repeat: no-repeat;
     background-position: -10vh 0vw 00vw;
     background-size: 60%;
