@@ -1,3 +1,6 @@
+.site-header{
+	background-color: #61a7c1;
+}
 // NAVIGATION
 .main-navigation {
 	display: inline-block;
@@ -256,11 +259,11 @@ Section desktop
 	}
 
 	.nav-previous {
-		flex: 1 0 50%;
+		// flex: 1 0 50%;
 	}
 
 	.nav-next {
-		text-align: end;
-		flex: 1 0 50%;
+		// text-align: end;
+		// flex: 1 0 50%;
 	}
 }

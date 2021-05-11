@@ -787,6 +787,10 @@ textarea {
 --------------------------------------------------------------*/
 /* Navigation
 --------------------------------------------- */
+.site-header {
+  background-color: #61a7c1;
+}
+
 .main-navigation {
   display: inline-block;
   width: 100vw;
@@ -1032,19 +1036,6 @@ Section desktop
 .posts-navigation .nav-links,
 .post-navigation .nav-links {
   display: flex;
-}
-
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-  flex: 1 0 50%;
-}
-
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-  text-align: end;
-  flex: 1 0 50%;
 }
 
 /* Posts and pages
@@ -1854,6 +1845,27 @@ body.home::after {
     margin-right: 5vh;
     width: 150px;
   }
+}
+
+.nav-links {
+  justify-content: space-between;
+  padding: 0 5%;
+}
+
+.nav-links .nav-previous, .nav-links .nav-next {
+  display: flex;
+  width: 110px;
+  height: 40px;
+  background-color: #2ee273;
+  border-radius: 100px;
+}
+
+.nav-links .nav-previous a, .nav-links .nav-next a {
+  font-weight: bold;
+  align-self: center;
+  margin: 0 auto;
+  text-decoration: none;
+  color: white;
 }
 
 /*----------------- variable sass */

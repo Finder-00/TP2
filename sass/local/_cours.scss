@@ -2,6 +2,7 @@
     background-color: #001A27;
 }
 
+// titre du cours - article
 .entry-title{ // titre des articles
     margin-right: 35vw;
     padding-left: 4vw;
@@ -17,7 +18,7 @@
     @include media-tablette{
         font-size: clamp(1rem, #{"-.8rem + 8.333vw"}, 1.6rem);
     }
-}
+} // fin entry title
 
 .entry-content{ // les articles des cours 
     width: 90vw;
@@ -73,4 +74,26 @@
             width: 150px;
         }
     }// fin media-desktop
+
 }// fin .entry-content
+
+.nav-links{
+    justify-content: space-between;
+    padding: 0 5%;
+    // bouton suivant et precedent
+    .nav-previous,.nav-next{
+        display: flex;
+        width: 110px;
+        height: 40px;
+        background-color: rgb(46, 226, 115);
+        border-radius: 100px;
+    }
+    // texte dans suivant et precedent
+    .nav-previous a,.nav-next a{
+        font-weight: bold;
+        align-self: center;
+        margin:0 auto;
+        text-decoration: none;
+        color: white;
+    }
+}
