@@ -1,11 +1,15 @@
 .site-header{
-	background-color: #61a7c1;
+	background-color: #151834;
+	@include media-desktop{
+		background-color: inherit;
+	}
 }
 // NAVIGATION
 .main-navigation {
 	display: inline-block;
 	width: 100vw;
 
+	@include media-desktop{
 	// icone TIM menu
 	ul>li:first-of-type{
 		width: 75px;
@@ -22,14 +26,15 @@
 			background-color: #91e2e2;
 		}
 	}
-
+	}
+	// primary-menu
 	ul {/* nav - menu (ul principal) */
 		background-color:#c8fdff;
 		display: none;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
-		padding: 30px 0;
+		padding: 5px 0;
 		width: 100%;
 
 	
@@ -58,7 +63,7 @@
 
 		li{ /*les onglets principale*/
 			font-size: 1.2rem;
-			padding: 10px 5px;
+			padding: 10px 20px;
 
 			&:hover{
 				background-color: rgba(134, 216, 225, 0.392);
@@ -179,13 +184,15 @@ Section desktop
 .main-navigation.toggled ul,
 .main-navigation ul{
 	@include media-desktop{
+		// ul primary-menu
 		display: flex !important; // solution du bug de menu en passant de mobile a desktop
 		position: static;
 		justify-content: space-around;
 		align-items: center;
 		width: 100vw;
 		height: 2rem;
-		background-color: #c8fdff;
+		padding: 30px 0;
+
 		a[href="#"]::after{
 			display: none;
 		}

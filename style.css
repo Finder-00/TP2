@@ -788,7 +788,13 @@ textarea {
 /* Navigation
 --------------------------------------------- */
 .site-header {
-  background-color: #61a7c1;
+  background-color: #151834;
+}
+
+@media (min-width: 1100px) {
+  .site-header {
+    background-color: inherit;
+  }
 }
 
 .main-navigation {
@@ -797,22 +803,21 @@ textarea {
   /* fin ul principale*/
 }
 
-.main-navigation ul > li:first-of-type {
-  width: 75px;
-  margin-left: 7px;
-}
-
-.main-navigation ul > li:first-of-type:hover {
-  background-color: rgba(0, 195, 255, 0);
-}
-
-.main-navigation ul ul > li:first-of-type {
-  margin: 0 auto;
-  width: 100%;
-}
-
-.main-navigation ul ul > li:first-of-type:hover {
-  background-color: #91e2e2;
+@media (min-width: 1100px) {
+  .main-navigation ul > li:first-of-type {
+    width: 75px;
+    margin-left: 7px;
+  }
+  .main-navigation ul > li:first-of-type:hover {
+    background-color: rgba(0, 195, 255, 0);
+  }
+  .main-navigation ul ul > li:first-of-type {
+    margin: 0 auto;
+    width: 100%;
+  }
+  .main-navigation ul ul > li:first-of-type:hover {
+    background-color: #91e2e2;
+  }
 }
 
 .main-navigation ul {
@@ -822,7 +827,7 @@ textarea {
   list-style: none;
   margin: 0;
   padding-left: 0;
-  padding: 30px 0;
+  padding: 5px 0;
   width: 100%;
   /*fin sub-menu*/
 }
@@ -854,7 +859,7 @@ textarea {
 .main-navigation ul li {
   /*les onglets principale*/
   font-size: 1.2rem;
-  padding: 10px 5px;
+  padding: 10px 20px;
 }
 
 .main-navigation ul li:hover {
@@ -968,7 +973,7 @@ Section desktop
     align-items: center;
     width: 100vw;
     height: 2rem;
-    background-color: #c8fdff;
+    padding: 30px 0;
   }
   .main-navigation.toggled ul a[href="#"]::after,
   .main-navigation ul a[href="#"]::after {
@@ -1895,18 +1900,18 @@ body.home::after {
 
 #burger div:nth-of-type(1) {
   clip-path: polygon(0 15%, 100% 15%, 100% 25%, 0 25%);
-  background-color: #4e1ebd;
+  background-color: #3e02c9;
 }
 
 #burger div:nth-of-type(2) {
   clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
-  background-color: #4e1ebd;
+  background-color: #3e02c9;
   z-index: -1;
 }
 
 #burger div:nth-of-type(3) {
   clip-path: polygon(0 75%, 100% 75%, 100% 85%, 0 85%);
-  background-color: #4e1ebd;
+  background-color: #3e02c9;
 }
 
 /*--------- Animation barre 1 */
