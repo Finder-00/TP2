@@ -803,7 +803,12 @@ textarea {
 }
 
 .main-navigation ul ul > li:first-of-type {
-  width: auto;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.main-navigation ul ul > li:first-of-type:hover {
+  background-color: #91e2e2;
 }
 
 .main-navigation ul {
@@ -1292,6 +1297,7 @@ body.home::after {
 
 @media (min-width: 1100px) {
   body.home::after {
+    background: url("https://e1938022.webdev.cmaisonneuve.qc.ca/Arthur_Robitaille-4w4/wp-content/uploads/2021/05/ordi3-scaled.jpg");
     background-repeat: no-repeat;
     background-position: -10vh 0vw 00vw;
     background-size: 60%;
@@ -2336,7 +2342,20 @@ body.home::after {
 }
 
 .contenuNouvelles {
+  display: flex;
   margin-left: 4vw;
+}
+
+.contenuNouvelles section {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 0;
+  margin: 0 5%;
+  text-align: center;
+}
+
+.contenuNouvelles section:first-of-type {
+  margin: 0;
 }
 
 .contenuNouvelles h2 {
@@ -2358,28 +2377,6 @@ body.home::after {
   background-color: #3dda83;
 }
 
-/*
-footer{ // class du footer
-    width: 100vw;
-    margin: 0;
-    .site-info{
-        padding: 1rem 0;
-        display: flex;
-        background-color: rgba(11, 63, 140, 0.433);
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        h3{
-            font-weight: bold;
-            text-decoration: none;
-        }
-        a{
-            text-decoration: none;
-        }
-    }
-}
-*/
 .site-footer {
   width: 100vw;
   display: flex;
@@ -2397,6 +2394,7 @@ footer{ // class du footer
 }
 
 .site-footer .ligne-footer h2 {
+  text-align: center;
   color: black;
 }
 
@@ -2411,6 +2409,18 @@ footer{ // class du footer
 
 .site-footer .ligne-footer #calendar-3 #wp-calendar {
   margin-bottom: 0;
+}
+
+.site-footer .ligne-footer #calendar-3 #wp-calendar td {
+  transition: all .35s;
+  background-color: antiquewhite;
+}
+
+.site-footer .ligne-footer #calendar-3 #wp-calendar td:hover {
+  transform: scale(101%);
+  opacity: 1;
+  border-radius: 10px;
+  background-color: #f0e1cd;
 }
 
 .site-footer .ligne-footer #calendar-3 .wp-calendar-nav {
@@ -2503,12 +2513,9 @@ footer{ // class du footer
   margin: 0 20px;
 }
 
-@media (min-width: 1100px) {
-  .site-footer #gallery-1 {
-    display: flex;
-  }
+@media (min-width: 750px) {
   .site-footer #gallery-1 img {
-    width: 10vw !important;
+    width: 12vw !important;
   }
 }
 
