@@ -1,0 +1,80 @@
+// grand titre de section projet
+.titreProjet{
+    display: flex;
+    width: 80vw;
+    flex-direction: column;
+    color: white;
+    h1,p{
+        margin: 0 auto;
+        text-align: center;
+    }
+    h1{
+        margin: 3% 0 10px 0;
+    }
+    p{
+        margin-bottom: 3%;
+    }
+}
+.prof-frontPage{
+    width: 100vw;
+
+}
+.prof{
+    width: 100vw;
+    height: 100%;
+}
+@include media-tablette{
+    .prof{
+        width: 78vw;
+    }   
+}
+
+
+
+// section contenant tout projet
+.prof,.prof-frontPage{
+    background-color: rgb(36, 78, 119);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .article{
+        box-sizing: border-box;
+        padding: 20px 10px 10px 10px;
+        margin: 10px;
+        text-align: center;
+        justify-content: center;
+        transition: all .2s ease-out;
+        &:hover{
+            transform: scale(102%);
+            cursor: pointer;
+        }
+        &:hover > a img{
+            box-shadow: 0px 4px 12px rgba(239, 255, 249, 0.404);
+        }
+
+        a img{
+            transition: all .2s ease-out;
+            border-radius: 10px;
+            width: 200px;
+        }
+
+        // nom prof
+        .prof_info{
+            z-index: 2;
+            font-size: clamp(.8rem, #{"-.8rem + 8.333vw"}, 1.4rem);
+            color: white;
+            font-weight: bold;
+        }
+    }
+}
+
+// description des projets-perso
+.description{
+    display: flex;
+    font-size: 1rem ;
+    color: rgb(80, 80, 80);
+    width: 60%;
+    margin: 0 auto;
+    font-weight: normal;
+}
