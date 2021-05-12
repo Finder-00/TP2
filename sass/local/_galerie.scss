@@ -81,13 +81,13 @@
             top: 0;
             left: 0;
             opacity: 0;
-            background-color: rgb(240, 240, 240);
+            background-color: rgb(228, 255, 251);
         }
         &:hover > a span{
             z-index: 1;
             opacity: 1;
             transform: rotateY(180deg) scale(105%);
-            box-shadow: 0px 6px 3.7px rgba(0, 0, 0, 0.31);
+            box-shadow: 0px 5px 4.5px rgba(244, 255, 254, 0.466);
         }
 
         // effet sur l'image de l'article
