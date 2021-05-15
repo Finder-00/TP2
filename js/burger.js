@@ -6,7 +6,6 @@
     let nav = document.querySelector('.main-navigation ul');
 
     burger.addEventListener('mousedown', function(){
-        //console.log(burger.id);
         if(bar1.classList.contains('ouvrirX1') == false){
             bar1.classList.remove('fermerX1');
             bar1.classList.add('ouvrirX1');

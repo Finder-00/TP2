@@ -97,7 +97,6 @@ boutonAnnonce.addEventListener('mousedown', function(){
     creeArticle.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     creeArticle.send(JSON.stringify(monArticle))
     creeArticle.onreadystatechange = function(){
-        console.log(monArticle);
         if(creeArticle.readyState == 4){
             if(creeArticle.status == 201){
                 document.querySelector('.admin-rapide [name="title"]').value = ''

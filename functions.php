@@ -230,7 +230,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 
 
-
+// extraire les cours pour front-page
 function extraire_cours_front_page($query){
 	if(!is_admin() && $query->is_front_page() && $query->is_main_query() ){
 		$query->set('category_name', 'cours' );

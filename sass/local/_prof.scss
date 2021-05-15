@@ -1,4 +1,4 @@
-// grand titre de section projet
+// grand titre de section prof
 .titreProjet{
     display: flex;
     width: 80vw;
@@ -15,29 +15,44 @@
         margin-bottom: 3%;
     }
 }
-.prof-frontPage{
-    width: 100vw;
 
-}
+
+
+// section contenant tout les profs
 .prof{
-    width: 100vw;
-    height: 100%;
-}
-@include media-tablette{
-    .prof{
-        width: 78vw;
-    }   
-}
-
-
-
-// section contenant tout projet
-.prof,.prof-frontPage{
     background-color: rgb(36, 78, 119);
     display: flex;
+    width: 100vw;
+    height: 100%;
     flex-wrap: wrap;
     justify-content: center;
+    @include media-tablette{
+        width: 78vw;
+    }
 
+    // section contenant tout les profs PROGRAMMATION
+    .sectionProg{
+        h1{
+            color: rgb(0, 226, 91);
+            text-shadow: 0px 4px 10px rgb(0, 203, 0);
+        }
+        .contenuProg{
+            display: flex;
+        }
+    }
+
+     // section contenant tout les profs CREATION
+     .sectionCreation{
+        h1{
+            color: rgb(0, 211, 226);
+            text-shadow: 0px 4px 10px rgb(0, 200, 203);
+        }
+        .contenuCreation{
+            display: flex;
+        }
+    }
+
+    // style general des cases profs
     .article{
         box-sizing: border-box;
         padding: 20px 10px 10px 10px;
@@ -62,9 +77,8 @@
         // nom prof
         .prof_info{
             z-index: 2;
-            font-size: clamp(.8rem, #{"-.8rem + 8.333vw"}, 1.4rem);
+            font-size: clamp(.8rem, #{"-.8rem + 8.333vw"}, 1.2rem);
             color: white;
-            font-weight: bold;
         }
     }
 }
