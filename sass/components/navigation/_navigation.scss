@@ -65,8 +65,11 @@
 
 
 		li{ /*les onglets principale*/
-			font-size: clamp(.9rem, #{"-.8rem + 2.5vw"}, 1.2rem);
 			padding: 10px 20px;
+			font-size: 1.15rem;
+			@include media-desktop{
+				font-size: clamp(1rem, #{"-.8rem + 2.5vw"}, 1.2rem);
+			}
 
 			&:hover{
 				background-color: rgba(134, 216, 225, 0.392);
@@ -162,6 +165,11 @@ transform: scale(0.88);
 
 .main-navigation .visible{
 	display: block !important;
+}
+@include media-desktop{
+	.main-navigation .visible{
+		display: flex !important;
+	}
 }
 
 .sub-menu{

@@ -20,6 +20,14 @@
     }
 } // fin entry title
 
+.post-thumbnail{
+    box-sizing: border-box;
+    padding: 4%;
+    img{
+        border-radius: 3px;
+    }
+}
+
 .entry-content{ // les articles des cours 
     width: 90vw;
     margin: 0 auto;
@@ -29,7 +37,6 @@
     flex-direction: column;
     text-align: center;
     font-size: clamp(.9rem, #{"-.8rem + 8.333vw"}, 1.3rem);
-
     color: rgb(67, 169, 193);
     background: rgb(24, 54, 79);
     p{
@@ -48,6 +55,7 @@
         margin: 0 0 0 0px;
     }
     img{
+        padding-top: 15px;
         display: block;
         border-radius: 10px;
     }

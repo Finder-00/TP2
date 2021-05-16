@@ -16,4 +16,7 @@ global $typeProf;
 		<div class="prof_info">	
 			<?php the_title() ?>
 		</div>
+		<div class="prof_info">	
+			<?php the_archive_description( ) ?>
+		</div>
 	</article>

@@ -153,16 +153,29 @@
 
   // section contenant les 3 articles
   .contenuNouvelles{
-    display: flex;
-    margin-left: 4vw;
+    display: block;
+    margin-top: 10%;
+    padding: 0 10px;
+    // affiche cote a cote en tablette et +
+    @include media-tablette{
+        width: 93vw;
+        display: flex;
+    }
+    // les nouvelles individuelles
     section{
         display: flex;
         flex-direction: column;
         flex: 1 0 0;
-        margin: 0 5%;
+        margin: 0 2%;
+        padding: 0 2%;
+        border-top: 2px solid rgb(255, 76, 103);
+        border-bottom: 2px solid rgb(255, 76, 103);
         text-align: center;
         &:first-of-type{
-            margin: 0;
+            margin-left: 0;
+        }// bordure nouvelle
+        @include media-tablette{
+            border: 2px solid rgb(255, 76, 103);
         }
     }
     h2{
